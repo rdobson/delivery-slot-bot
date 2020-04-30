@@ -10,7 +10,7 @@ function getBrowser() {
       browserWSEndpoint: process.env.PUPPETEER_BROWSER_WS_ENDPOINT,
     });
   }
-  return puppeteer.launch();
+  return puppeteer.launch({ args: ['--no-sandbox'] });
 }
 
 /**
