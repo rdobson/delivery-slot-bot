@@ -28,7 +28,7 @@ const notifiers = [];
 
 if (rawConfig.tesco_username) {
   stores.push(
-    new TescoStore(rawConfig.tesco_username, rawConfig.tesco_password)
+    new TescoStore(process.env.TESCOUSER, process.env.TESCOPASS)
   );
 }
 
